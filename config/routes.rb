@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   
   root 'static_pages#index'
-
+  get 'static_pages/vuepeer'
+  get 'static_pages/flutter'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

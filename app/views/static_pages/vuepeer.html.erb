@@ -1,0 +1,32 @@
+<%= render 'partials/navbar' %>
+
+<section class="project-banner vuepeer">
+	<h1 class="text-center banner-text">VuePeer</h1>
+</section>
+
+<div class="container vuepeer-summary">
+
+	<div class="row vuepeer-description">
+		<div class="col-md-offset-2 col-md-8">
+			<img class="img-responsive center-block vuepeer-index" src="/assets/vuepeer-index.png" height="360" />
+
+			<p class="vuepeer-desc">
+				Created a search engine for finding peer-to-peer rentals. Built profile creation feature that allows users to customize their profile, and upload listings from AirBnB, and other sharing-economy websites. Built social networking features, such as the ability to view other users' profiles and follow them. 
+			</p>
+
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/vuepeer-profile.png" height="360" />
+
+			<p class="vuepeer-desc">
+				Also built search engine feature that allows user to find listings and filter them based on distance, price, star ratings, and type (e.g. car rentals, lodging, etc.). Built PeersNearMe feature which allows the user to view all other users within a given radius, graphically represented in a drawn and highlighted zipcode boundary within a Google Map canvas.
+			</p>
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/listings-search.png" height="360" />
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/nearme.png" height="360" />
+
+			<p class="vuepeer-desc">
+				Utilized MongoDB to reduce development time. The absence of migrations and ability to modify the database schema on the fly really streamlined the development process. MongoDB's use of embedded document association also helped to more clearly express models and their relationships. For example, each user-uploaded listing on VuePeer has many reviews, left by other users. By embedding the reviews under the listing model, we eliminated the need to store reviews in a standalone table, then iterate over all reviews when trying to return those specifc to a certain listing (via foreign key). The syntax for returning reviews for a given listing, in Ruby on Rails, thus became as simple as writing: <strong>curr_listing.reviews.all</strong> as opposed to: <strong>Review.where(listing_id: curr_listing.id).all</strong>
+			</p>
+		</div>
+	</div>
+</div>
+
+<%= render 'partials/footer' %>
