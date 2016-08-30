@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   get 'static_pages/vuepeer'
   get 'static_pages/flutter'
+  get 'static_pages/wecook'
+  get 'static_pages/telenix'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

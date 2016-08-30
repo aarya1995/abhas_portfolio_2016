@@ -31,8 +31,23 @@
 				Utilized MongoDB to reduce development time. The absence of migrations and ability to modify the database schema on the fly really streamlined the development process. MongoDB's use of embedded document association also helped to more clearly express models and their relationships. For example, each user-uploaded listing on VuePeer has many reviews, left by other users. By embedding the reviews under the listing model, we eliminated the need to store reviews in a standalone table, then iterate over all reviews when trying to return those specifc to a certain listing (via foreign key). The syntax for returning reviews for a given listing, in Ruby on Rails, thus became as simple as writing:
 			</p>
 
-			<pre style="margin-top: 3%;"><code class="language-ruby">curr_listing.reviews.all # as opposed to: Review.where(listing_id: curr_listing.id).all </code></pre>
+			<pre class="last" style="margin-top: 3%;"><code class="language-ruby">curr_listing.reviews.all # as opposed to: Review.where(listing_id: curr_listing.id).all </code></pre>
+
+			<a class="project-btn btn-lg vuepeer" href="#"><i class="fa fa-link"></i> View project</a>
+			<br />
+			<br />
+			<br />
+			<br />
+			<a class="project-btn btn-lg github" href="#"><i class="fa fa-github"></i> View source</a>
 		</div>
+	</div>
+
+	<div class="row tags-row">
+	 <div class="col-md-offset-2 col-md-8">
+		<div class="item-content-block tags center-block">
+	    	<a href="#">Development</a> <a href="#" class="tag2">Design</a>
+	    </div>
+	 </div>
 	</div>
 </div>
 

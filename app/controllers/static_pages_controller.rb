@@ -7,4 +7,10 @@ class StaticPagesController < ApplicationController
 
 	def flutter
 	end
+
+	def wecook
+	end
+
+	def telenix
+	end
 end
