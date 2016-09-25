@@ -1,0 +1,37 @@
+<%= render 'partials/navbar' %>
+
+<section class="project-banner kwiknews">
+	<h1 class="text-center banner-text2">KwikNews</h1>
+</section>
+
+<div class="container vuepeer-summary">
+	<div class="row vuepeer-description">
+		<div class="col-md-offset-2 col-md-8">
+			<img class="img-responsive center-block vuepeer-index" src="/assets/kwiknews.png" height="360" />
+
+			<p class="vuepeer-desc">
+				Created a RSS aggregator to discover interesting news stories. Tapped into BBC and CNN publicly available RSS feeds using the FeedJira gem. One issue that I had to optimize for was finding more high quality images to go along with the news stories, since the main image stored with each article in the RSS feed had very poor quality. I solved this by only storing the textual information from the RSS feed, then using the Nokogiri gem to crawl the url of each article in the database, and screen scraping the higher-quality headline image. 
+			</p>
+
+			<p class="vuepeer-desc" style="margin-bottom: 9%;">
+				Designed the UI similar to Pinterest's. Enacpsulated each article in a card using the jQuery masonry library. 
+			</p>
+
+			<a class="project-btn btn-lg kwiknews" href="https://powerful-sea-3169.herokuapp.com/?page=3" target="_blank"><i class="fa fa-link"></i> View project</a>
+			<br />
+			<br />
+			<br />
+			<br />
+			<a class="project-btn btn-lg github" href="https://github.com/aarya1995/news_reader" target="_blank"><i class="fa fa-github"></i> View source</a>
+		</div>
+	</div>
+	<div class="row tags-row">
+	 <div class="col-md-offset-2 col-md-8">
+		<div class="item-content-block tags center-block">
+	    	<a href="#">Development</a> <a href="#" class="tag2">Design</a>
+	    </div>
+	 </div>
+	</div>
+</div>
+
+<%= render 'partials/footer' %>

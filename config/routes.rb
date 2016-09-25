@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   get 'static_pages/flutter'
   get 'static_pages/wecook'
   get 'static_pages/telenix'
+  get 'static_pages/kwiknews'
+  get 'static_pages/hirekeep'
+  get 'static_pages/fitness44'
+  get 'static_pages/talklocal'
+  get 'static_pages/brivo'
+  get 'static_pages/sup'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
