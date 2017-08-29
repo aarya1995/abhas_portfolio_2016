@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get 'static_pages/talklocal'
   get 'static_pages/brivo'
   get 'static_pages/sup'
+  get 'static_pages/peds'
+  get 'static_pages/meeshquest'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

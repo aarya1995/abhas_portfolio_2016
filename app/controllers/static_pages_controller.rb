@@ -13,4 +13,10 @@ class StaticPagesController < ApplicationController
 
 	def telenix
 	end
+
+	def peds
+	end
+
+	def meeshquest
+	end
 end

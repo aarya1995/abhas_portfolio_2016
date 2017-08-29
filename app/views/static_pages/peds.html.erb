@@ -1,0 +1,66 @@
+<%= render 'partials/navbar' %>
+
+<section class="project-banner peds">
+	<h1 class="text-center banner-text">PEDS</h1>
+</section>
+
+<div class="container vuepeer-summary">
+
+	<div class="row vuepeer-description">
+		<div class="col-md-offset-2 col-md-8">
+			<img class="img-responsive center-block vuepeer-index" src="/assets/peds-main-page.png" height="360" />
+
+			<p class="vuepeer-desc">
+				For my database course's capstone project, we had to implement and design a system that would provide users with historical election results. I teamed up with one other colleague, and together we built PEDS. Our interactive web application equips users with tools to query and visualize a wide array of presidential election related queries.
+			</p>
+
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/peds-er.png" height="360" />
+
+			<p class="vuepeer-desc" style="margin-bottom: 6%;">
+				We designed our relational schema to be able to query not only election results, but also information on every candidate in every election. We also took into consideration U.S. polling data for each candidate and also the U.S. population for every given year. 
+			</p>
+
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/peds-election-query.png" height="360" />
+			<p class="vuepeer-desc" style="margin-top: 5%;">
+				We programatically scraped every election's results dating back to 1789. Data was sourced from <a class="peds-link" href="http://www.presidency.ucsb.edu/elections.php"><i>The American Presidency Project</i></a>. We utilized the ruby web scraping library <i>Nokogiri</i> to accomplish this task.
+			</p>
+
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/peds-candidate-query.png" height="360" style="margin-bottom: 5%;" />
+
+			<p class="vuepeer-desc">
+				We also collected data such as election outcomes and polling for every candidate, including third party candidates, from every election. 
+			</p>
+
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/peds-interesting-query.png" height="360" />
+
+			<p class="vuepeer-desc" style="margin-bottom: 7%;">
+				To wrap up, we composed a 24 page design document where we give an in depth explanation for our system design and our relational schema, as well as other technical decisions. 
+			</p>
+
+			<a class="project-btn btn-lg peds" href="http://peds.herokuapp.com/" target="_blank"><i class="fa fa-link"></i> View project</a>
+			<br />
+			<br />
+			<br />
+			<br />
+			<a class="project-btn btn-lg github" href="https://github.com/aarya1995/PEDS" target="_blank"><i class="fa fa-github"></i> View source</a>
+			<br />
+			<br />
+			<br />
+			<br />
+			<a class="project-btn btn-lg btn-primary" href="https://www.dropbox.com/s/vxhm2os8y3i8c61/424%20Final%20report.pdf?dl=0" target="_blank"><i class="fa fa-link"></i> View Design Doc</a>
+
+			<!--<a class="project-btn btn-lg github" href="#"><i class="fa fa-github"></i> View source</a>-->
+		</div>
+	</div>
+
+	<div class="row tags-row">
+	 <div class="col-md-offset-2 col-md-8">
+		<div class="item-content-block tags center-block">
+	    	<a href="#">Development</a> <a href="#" class="tag2">Design</a>
+	    	<a href="#" class="tag3">Coursework</a>
+	    </div>
+	 </div>
+	</div>
+</div>
+
+<%= render 'partials/footer' %>
