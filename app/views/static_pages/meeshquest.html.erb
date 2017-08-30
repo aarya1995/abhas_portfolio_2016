@@ -11,7 +11,7 @@
 			<img class="img-responsive center-block vuepeer-index" src="/assets/mapquest.jpg" style="height: 360px !important; width: 500px;" />
 
 			<p class="vuepeer-desc">
-				Spring semester of 2017, I took UMD's infamous data structures course: <i>CMSC420</i>. The reason this course is so famous in the computer science department is because of the challenging, semester-long project known as MeeshQuest. For this project, students are supposed to work independently to implement a stripped down version of MapQuest. The end result was an appliation capable of efficiently computing the shortest distance between two points and returning the directions to take, through certain roads or airports. 
+				Spring semester of 2017, I took UMD's infamous data structures course: <i>CMSC420</i>. The reason this course is so famous in the computer science department is because of the challenging, semester-long project known as MeeshQuest. For this project, students are supposed to work independently to implement a stripped down version of MapQuest. The end result is supposed to be an application capable of efficiently computing the shortest distance between two points and returning the directions to take, through certain roads or airports. 
 			</p>
 
 			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/crash-bandicoot.jpg" style="height: 360px !important;" />
@@ -22,13 +22,13 @@
 
 			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/prquadtree.png" height="360" />
 			<p class="vuepeer-desc" style="margin-top: 5%;">
-				In a similar vein, we utilized quadtrees to quickly find shortest distance between two cities and generate optimal directions. Imagine if we have 100 cities stored in our application. If we decide to compare every city to find the nearest neighbor to city A, then that would require 10,000 operations - that's a lot of checks! One way to speed up this brute force is to avoid searching for cities that are on completely opposite ends of the map from city A. This is where quadtrees come into play.  
+				In a similar vein, we utilized quadtrees to quickly compute the shortest distance between two cities and generate optimal directions. Imagine if we have 100 cities stored in our application. If we decide to compare every city to find the nearest neighbor to City A, then that would require 10,000 operations - that's a lot of checks! One way to speed up this brute force is to avoid searching for cities that are on completely opposite ends of the map from City A. This is where quadtrees come into play.  
 			</p>
 
 			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/quadtree.png" style="margin-bottom: 5%; height: 360px !important; width: 450px !important;" />
 
 			<p class="vuepeer-desc">
-				Let's imagine our quadtrees as a representation of a spatial map, where each node represents a region. If we insert city, then that point will occupy a region within the map. Once we insert a second city, then the key space will be recursively divided into 4 regions until the two cities no long occupy the same quadrant.  
+				Let's imagine our quadtrees as a representation of a spatial map, where each node represents a region. If we insert a city, then that point will occupy a region within the map. Once we insert a second city, then the key space will be recursively divided into 4 regions until the two cities no long occupy the same quadrant <small><i>(**By the definition of <a class="peds-link" href="https://wiki.cs.umd.edu/cmsc420/index.php?title=PR_Quadtree">PR Quadtrees</a>)</i></small>.  
 			</p>
 
 			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/quadtree2.png" style="height: 300px !important; width: 400px !important;" />
@@ -40,7 +40,7 @@
 			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/submit-server.png" style="margin-bottom: 5%; height: 450px !important; width: 800px !important;" />
 
 			<p class="vuepeer-desc" style="margin-bottom: 7%;">
-				Overall, this was one of the most challenging projects in my undergraduate career and definitely made me a stronger developer. The above is a screenshot of various submission trials for the project, where red bars denote failing tests and green bars denote passing tests. This project made me a stronger debugger as well. Some notable debugging skills I acquired were <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" class="peds-link"><i>rubber ducking</i></a> and becoming proficient with the eclipse debugger, which was invaluable while tracing through multiple recursive calls on the call stack to find a bug.   
+				Overall, this was one of the most challenging projects in my undergraduate career and definitely made me a stronger developer. The above is a screenshot of various submission trials for the project, where red bars denote failing tests and green bars denote passing tests. This project made me a stronger debugger as well. Some notable debugging skills I refined were <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" class="peds-link"><i>rubber ducking</i></a> and becoming proficient with the eclipse debugger, which was invaluable while tracing through multiple recursive calls on the call stack to find a bug.   
 			</p>
 
 			<p class="vuepeer-desc">

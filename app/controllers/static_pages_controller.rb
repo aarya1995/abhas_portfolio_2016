@@ -19,4 +19,7 @@ class StaticPagesController < ApplicationController
 
 	def meeshquest
 	end
+
+	def datascience
+	end
 end
