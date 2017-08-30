@@ -11,43 +11,55 @@
 			<img class="img-responsive center-block vuepeer-index" src="/assets/mapquest.jpg" style="height: 360px !important; width: 500px;" />
 
 			<p class="vuepeer-desc">
-				Spring semester of 2017, I took UMD's infamous data structures course: <i>CMSC420</i>. The reason this course is so famous in the computer science department is because of the challenging, semester-long project known as MeeshQuest. For this project, students are supposed to work independently to implement a stripped down version of MapQuest. This application should be able to compute the shortest distance between two points efficiently and compute the directions to take, through certain roads or airports. 
+				Spring semester of 2017, I took UMD's infamous data structures course: <i>CMSC420</i>. The reason this course is so famous in the computer science department is because of the challenging, semester-long project known as MeeshQuest. For this project, students are supposed to work independently to implement a stripped down version of MapQuest. The end result was an appliation capable of efficiently computing the shortest distance between two points and returning the directions to take, through certain roads or airports. 
 			</p>
 
-			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/peds-er.png" height="360" />
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/crash-bandicoot.jpg" style="height: 360px !important;" />
 
 			<p class="vuepeer-desc" style="margin-bottom: 6%;">
-				We designed our relational schema to be able to query not only election results, but also information on every candidate in every election. We also took into consideration U.S. polling data for each candidate and also the U.S. population for every given year. 
+				 This project exposed me to quadtrees (of the PM and PR varieties), which were essential to the overall efficiency of the application. A quadtree is a 4-ary tree used to divide a 2D region into more manageable parts. Quadtrees are often used in video games such as Crash Bandicoot, for their blazing fast collision detection.
 			</p>
 
-			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/peds-election-query.png" height="360" />
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/prquadtree.png" height="360" />
 			<p class="vuepeer-desc" style="margin-top: 5%;">
-				We programatically scraped every election's results dating back to 1789. Data was sourced from <a class="peds-link" href="http://www.presidency.ucsb.edu/elections.php"><i>The American Presidency Project</i></a>. We utilized the ruby web scraping library <i>Nokogiri</i> to accomplish this task.
+				In a similar vein, we utilized quadtrees to quickly find shortest distance between two cities and generate optimal directions. Imagine if we have 100 cities stored in our application. If we decide to compare every city to find the nearest neighbor to city A, then that would require 10,000 operations - that's a lot of checks! One way to speed up this brute force is to avoid searching for cities that are on completely opposite ends of the map from city A. This is where quadtrees come into play.  
 			</p>
 
-			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/peds-candidate-query.png" height="360" style="margin-bottom: 5%;" />
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/quadtree.png" style="margin-bottom: 5%; height: 360px !important; width: 450px !important;" />
 
 			<p class="vuepeer-desc">
-				We also collected data such as election outcomes and polling for every candidate, including third party candidates, from every election. 
+				Let's imagine our quadtrees as a representation of a spatial map, where each node represents a region. If we insert city, then that point will occupy a region within the map. Once we insert a second city, then the key space will be recursively divided into 4 regions until the two cities no long occupy the same quadrant.  
 			</p>
 
-			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/peds-interesting-query.png" height="360" />
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/quadtree2.png" style="height: 300px !important; width: 400px !important;" />
 
 			<p class="vuepeer-desc" style="margin-bottom: 7%;">
-				To wrap up, we composed a 24 page design document where we give an in depth explanation for our system design and our relational schema, as well as other technical decisions. 
+				As you can see above, each node contains a few objects. We know then that, for instance, the objects in the top-left node cannot be close to objects in the bottom-right node, which leads us to derive very efficient algorithms for shortest distance, and other geographic queries. 
 			</p>
 
-			<a class="project-btn btn-lg peds" href="http://peds.herokuapp.com/" target="_blank"><i class="fa fa-link"></i> View project</a>
+			<img class="img-responsive center-block vuepeer-index vuepeer-img" src="/assets/submit-server.png" style="margin-bottom: 5%; height: 450px !important; width: 800px !important;" />
+
+			<p class="vuepeer-desc" style="margin-bottom: 7%;">
+				Overall, this was one of the most challenging projects in my undergraduate career and definitely made me a stronger developer. The above is a screenshot of various submission trials for the project, where red bars denote failing tests and green bars denote passing tests. This project made me a stronger debugger as well. Some notable debugging skills I acquired were <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" class="peds-link"><i>rubber ducking</i></a> and becoming proficient with the eclipse debugger, which was invaluable while tracing through multiple recursive calls on the call stack to find a bug.   
+			</p>
+
+			<p class="vuepeer-desc">
+				Some notable data structures I implemented from scratch for this project include:
+				<ul class="vuepeer-desc" style="margin-bottom: 7%;">
+					<li><strong>AVL-g Tree</strong> (a variation of the AVL tree) <br>
+						&nbsp;&nbsp;Used to represent a data dictionary</li>
+					<li><strong>Point Region (PR) Quadtree </strong><br>
+						&nbsp;&nbsp; Used to represent metropoles (clusters of cities)</li>
+					<li><strong>Polygonal Map (PM) Quadtree</strong> <br>
+						&nbsp;&nbsp; Used to store cities, airports, and roads</li>
+				</ul>   
+			</p>
+
+			<a class="project-btn btn-lg meeshquest" href="https://wiki.cs.umd.edu/cmsc420/index.php?title=MeeshQuest" target="_blank"><i class="fa fa-link"></i> View project wiki</a>
 			<br />
 			<br />
 			<br />
 			<br />
-			<a class="project-btn btn-lg github" href="https://github.com/aarya1995/PEDS" target="_blank"><i class="fa fa-github"></i> View source</a>
-			<br />
-			<br />
-			<br />
-			<br />
-			<a class="project-btn btn-lg btn-primary" href="https://www.dropbox.com/s/vxhm2os8y3i8c61/424%20Final%20report.pdf?dl=0" target="_blank"><i class="fa fa-link"></i> View Design Doc</a>
 
 			<!--<a class="project-btn btn-lg github" href="#"><i class="fa fa-github"></i> View source</a>-->
 		</div>
@@ -56,7 +68,7 @@
 	<div class="row tags-row">
 	 <div class="col-md-offset-2 col-md-8">
 		<div class="item-content-block tags center-block">
-	    	<a href="#">Development</a> <a href="#" class="tag2">Design</a>
+	    	<a href="#">Data Structures</a> <a href="#" class="tag2">Algorithms</a>
 	    	<a href="#" class="tag3">Coursework</a>
 	    </div>
 	 </div>
