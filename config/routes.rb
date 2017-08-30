@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'static_pages/peds'
   get 'static_pages/meeshquest'
   get 'static_pages/datascience'
+  get 'static_pages/aqua'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

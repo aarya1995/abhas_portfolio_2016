@@ -22,4 +22,7 @@ class StaticPagesController < ApplicationController
 
 	def datascience
 	end
+
+	def aqua
+	end
 end
